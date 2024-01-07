@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+<form method="POST" action="/new">
+   input(type="text", user='user')
+   input(type="text", message='message')
+   button(type='submit') Submit
+</form>
