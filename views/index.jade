@@ -2,8 +2,11 @@ extends layout
 
 block content
   h1= title
-  each message in messages
-    p | User: #{message.user},
-    p | Message: #{message.text},
-    p | Date: #{message.added}
+
+  each message in messages 
+    p User Name: #{message.user} 
+    p Message: #{message.text}
+    p Date: #{message.added}
     br
+  a(href="./users") Click here to add a message 
+

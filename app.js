@@ -9,14 +9,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-// Define a route for handling the POST request for "/new"
-app.post('/new', (req, res) => {
-  const user = req.body.user;
-  const message = req.body.message;
-    // Respond with a confirmation message
-    res.send(`Received POST request for /new. Username: ${user}, Password: ${message}`);
-  });
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

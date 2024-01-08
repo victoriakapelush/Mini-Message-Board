@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST', action='/users')
+    input(type="text" name='user' placeholder='user')
+    input(type="text" name='message' placeholder='message')
+    button(type='submit') Submit
+
+  br
+  a(href="/") Go back

@@ -14,13 +14,15 @@ const messages = [
   }
 ];
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mini Message Board', messages: messages });
+  res.render('index', { title: 'Welcome to the Mini Message Board', messages: messages });
 });
 
-router.get('/new', function(req, res, next) {
-  res.render('form', { title: 'Mini Message Board'});
+router.post('/users', function(req, res, next) {
+  const user = req.body.user;
+  const message = req.body.message;
+  messages.push({text: message, user: user, added: new Date()});
+  res.redirect('/');
 });
 
 module.exports = router;
